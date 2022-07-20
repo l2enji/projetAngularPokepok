@@ -1,0 +1,70 @@
+.background{
+    background-image: url('http://localhost:3082/Images/fondEcranPoke.png');
+    margin-left: auto;
+    margin-right: auto;
+    width: 1900px;
+}
+.card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background:#ffffffc7;
+    background-clip: border-box;
+    border: 1px solid black;
+    margin-top: 10px;
+
+}
+
+.item{
+    text-align: center;
+    margin: 20px;
+    width:100px; 
+    
+}
+.prod{
+    text-decoration: none !important;
+    color: forestgreen;
+}
+.prod :hover{
+    color: rgb(205, 205, 3);
+}
+
+.item:hover{
+    color: brown;
+}
+.card{
+    padding: 14px;
+    margin: 50px;
+    display: inline-table;
+    max-width: 157px;
+    background-color: #ffffffc7;
+}
+.card-top img{
+    transition: 0.3s ease-in-out;
+    width:70px; height: 90px;
+}
+.card-top img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+img{
+    width:200px;
+    height: 220px;
+}
+.btn-send{
+    background-color: forestgreen; 
+    color: white
+}
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right: -2%;
+    top:400px;
+    color: forestgreen;
+    
+}
+.form-control{
+    margin-top: 15px;
+}

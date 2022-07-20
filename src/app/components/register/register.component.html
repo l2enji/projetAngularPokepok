@@ -1,0 +1,51 @@
+<div class="container bootstrap snippets bootdey">
+    <div class="lc-block col-md-4 col-md-offset-4 toggled" id="regist">
+        <div class="lcb-float"><i class="fa fa-users"></i></div>
+            <form #registerForm="ngForm" (ngSubmit) ="onRegister(registerForm.value)">
+                <div class="form-group">
+                    <span class="input-group-text"><i class="fas fa-user" style="margin-right:5px;"></i>Firstname</span>
+                    <span class="help-block" style="color:red;"
+                    *ngIf="firstnameInput.invalid && firstnameInput.touched">Please enter a firstname</span>
+                    <input type="text" class="form-control" placeholder="Enter Firstname" name="firstName"
+                        ngModel #firstnameInput="ngModel" required>
+                </div>
+                
+               
+                <div class="form-group">
+                    <span class="input-group-text"><i class="fas fa-user" style="margin-right:5px;"></i>Lastname</span>
+                    <span class="help-block" style="color:red;"
+                    *ngIf="lastnameInput.invalid && lastnameInput.touched">Please enter a lastname</span>
+                    <input type="text" class="form-control" placeholder="Enter Lastname" name="lastName"
+                        ngModel #lastnameInput="ngModel" required>
+                </div>
+                
+               
+                <div class="form-group">
+                    <span class="input-group-text"><i class="fas fa-user" style="margin-right:5px;"></i>Username</span>
+                    <span class="help-block" style="color:red;"
+                    *ngIf="usernameInput.invalid && usernameInput.touched">Please enter a username</span>
+                    <input type="text" class="form-control" placeholder="Enter Username" name="username"
+                        ngModel #usernameInput="ngModel" required>
+                </div>
+                
+                
+                <div class="form-group">
+                    <span class="input-group-text"><i class="fas fa-envelope" style="margin-right:5px;"></i>Email</span>
+                    <span class="help-block" style="color:red;"
+                    *ngIf="emailInput.invalid && emailInput.touched">Please enter an email.</span>
+                    <input type="text" class="form-control" placeholder="Enter an Email" name="email"
+                        ngModel #emailInput= "ngModel" required>
+                </div>
+                
+
+                <button type="submit" [disabled]="registerForm.invalid || showLoading" name="button" class="btn register_btn btn-float m-t-25" style="width:100%;">
+                    <span *ngIf="!showLoading">Register</span>
+                    <i *ngIf="showLoading" class="fas fa-spinner fa-spin"></i>&nbsp;&nbsp;
+                    <span *ngIf="showLoading">Loading...</span>
+                </button>
+            </form>           
+            
+            Do you already have an account? <a routerLink="/login">Login</a>
+            
+    </div>
+</div>

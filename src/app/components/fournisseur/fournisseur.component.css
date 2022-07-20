@@ -1,0 +1,14 @@
+body{
+    background-attachment: fixed;
+    height: 800px;
+}
+.background{
+    background-image: url('http://localhost:3082/Images/fondEcranPoke.png');
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding-top: 5px;
+}
+.container{
+    background-color: #ffffffc7;
+}

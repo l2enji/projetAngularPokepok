@@ -1,0 +1,64 @@
+
+    
+<div class="block text-center" >
+    <!-- resume-->
+    <div class="resume">
+        <h5>Resume</h5>
+        <ng-container *ngIf="product.length !=0">
+            <div class="card-table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <td class="tot"><strong>Grand Total: {{grandTotal}}€ </strong></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>NO</th>
+                            <th>DESCRIPTION</th>
+                            <th>DESCRIPTIF</th>
+                            <th>QUANTITE</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        
+                        <tr *ngFor="let item of product; let i = index;">
+                            <td><img src="http://localhost:3082/{{item.image}}" style="width: 100px; height : 100px;" alt=""></td>
+                            <td class="c">{{i+1}}</td>
+                            <td class="c">{{item.designation}}</td>
+                            <td class="c">{{item.descriptif}}</td>
+                            <td class="c">{{quant}}</td>
+                            <td class="c">{{quant*item.prixVenteHT}}€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </ng-container>
+    </div>
+    <!--payment-->
+    <div class="payment">
+        <div class="cointainer mt-5">
+            <h2>Checkout now</h2>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <button (click)="makePayment(grandTotal)" class="btn btn-primary btn-block">Pay {{grandTotal}}€</button>
+                </div>
+            </div>
+            <p class="mt">
+                Try it out using the test card number <b>4242 4242 4242 4242</b>, a random three-digit CVC number, any expiration date in the future
+            </p>
+        </div>
+    </div>
+</div>
+<!--<div class="container">
+    <h2 class="mt-5 mb-4">Angular Stripe Checkout Example</h2>
+    <div class="col-md-5 mb-2">
+      <button (click)="makePayment(15)" class="btn btn-danger btn-block">Pay $15</button>
+    </div>
+    <div class="col-md-5 mb-2">
+      <button (click)="makePayment(25)" class="btn btn-primary btn-block">Pay $25</button>
+    </div>
+    <div class="col-md-5">
+      <button (click)="makePayment(35)" class="btn btn-success btn-block">Pay $35</button>
+    </div>
+  </div>-->

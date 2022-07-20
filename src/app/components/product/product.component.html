@@ -1,0 +1,72 @@
+<body style="background-color: forestgreen !important;">
+    <div class="background" style="padding-top:1px;">
+        <div class="card-top container fluid">
+            <div class="container d-flex">
+                <div class="item">
+                    <a type="button" id="display" class="prod"><img
+                            src="http://localhost:3082/Images/display_staretincellant.jpg" alt="">
+                        <h6>Display</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a type="button" class="prod"><img src="http://localhost:3082/Images/etballianceinfaillible.jpg"
+                            alt="">
+                        <h6>ETB</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" class="prod"><img src="http://localhost:3082/Images/boostervoltageeclatant.jpg" alt="">
+                        <h6>Booster</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" class="prod"><img src="http://localhost:3082/Images/coffretAquali.jpg" alt="">
+                        <h6>Coffret</h6>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#" class="prod"><img src="http://localhost:3082/Images/protectDisplay.jpg" alt="">
+                        <h6>Protection</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+   
+        <div [hidden]="false" class="container" id="produit">
+             <div>
+    <form #searchForm="ngForm" class="form-inline my-2 my-lg-0 justify-content-center">
+        <input name="searchTerm" class="form-control mr-sm-2" ngModel (ngModelChange)="searchProduct(searchForm.value.searchTerm)" type="search"
+            placeholder="Search product...">
+    </form>
+    <span class="fas fa-search search-icon"></span>
+</div>
+<div class="row">
+                <ng-container *ngFor="let item of productList">
+                    <div class="card col m-3">
+                        <img src="http://localhost:3082/{{item.image}}" alt="">
+                        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                            {{item.designation}}</h5>
+                        <p>{{item.descriptif}}</p>
+                        <p><strong>Price </strong>{{item.prixVenteHT}}€</p>
+                        <button class="btn btn-send" (click)=addToCart(item)>Add to cart</button>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <div [hidden]="" class="container" id="display">
+            <div class="row">
+                <ng-container *ngFor="let item of productList">
+                    <div class="card col m-3">
+                        <img src="http://localhost:3082/{{item.image}}" alt="">
+                        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                            {{item.designation}}</h5>
+                        <p>{{item.descriptif}}</p>
+                        <p><strong>Prix </strong>{{item.prixVenteHT}}€</p>
+                        <button class="btn btn-send" (click)=addToCart(item)>Ajouter au panier</button>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</body>

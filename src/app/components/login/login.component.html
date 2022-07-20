@@ -1,0 +1,34 @@
+<body style="background-color: forestgreen !important;">
+<div class="background" style="background-image: url('http://localhost:3082/Images/fondEcranPoke.png');">
+<div class="container bootstrap snippets bootdey">
+    <div class="lc-block col-md-4 col-md-offset-4 toggled" id="l-login">
+        <div class="lcb-float"><i class="fa fa-users"></i></div>
+            <form #loginForm="ngForm" (ngSubmit) ="onLogin(loginForm.value)">
+                <div class="form-group">
+                    <span class="input-group-text"><i class="fas fa-user" style="margin-right:5px;"></i>Username</span>
+                    <input type="text" class="form-control" placeholder="Enter Username" name="username"
+                        ngModel #usernameInput="ngModel" required>
+                </div>
+                <span class="help-block" style="color:red;"
+                    *ngIf="usernameInput.invalid && usernameInput.touched">Please enter a username</span>
+                <div class="form-group">
+                    <span class="input-group-text"><i class="fas fa-key" style="margin-right:5px;"></i>Password</span>
+                    <input type="password" class="form-control" placeholder="Enter Password" name="password"
+                        ngModel #passwordInput= "ngModel" required>
+                </div>
+                <span class="help-block" style="color:red;"
+                    *ngIf="passwordInput.invalid && passwordInput.touched">Please enter a password.</span>
+                <button type="submit" [disabled]="loginForm.invalid || showLoading" name="button" class="btn login_btn btn-float m-t-25" style="width:100%;">
+                    <span *ngIf="!showLoading">Login</span>
+                    <i *ngIf="showLoading" class="fas fa-spinner fa-spin"></i>&nbsp;&nbsp;
+                    <span *ngIf="showLoading">Loading...</span>
+                </button>
+            </form>           
+            <a href="" class="forget">Forgot Password?</a>
+            
+            Don't have an account? <a routerLink="/register">Sign In</a>
+            
+    </div>
+</div>
+</div>
+</body>

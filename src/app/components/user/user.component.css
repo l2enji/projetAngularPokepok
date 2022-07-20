@@ -1,0 +1,74 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css';
+@import 'https://use.fontawesome.com/releases/v5.8.1/css/all.css';
+@import "~angular-notifier/styles";
+
+/*Style for user-management*/
+
+.nav-item1{
+    margin-right: 5px; 
+}
+.nav-item2{
+    margin-right: 5px;
+}
+.nav-item3{
+    margin-right: 5px;
+}
+.nav-pills .nav-link.active{
+    background-color: forestgreen;
+}
+.nav-pills:hover .nav-link.active:hover{
+    transition: 0.3s ease-in-out;
+}
+.navbar-expand-md{
+    background-color: black;
+    padding: 2px;
+}
+.btn-group{
+    margin-left: 5px;
+}
+.background{
+    background-image: url('http://localhost:3082/Images/fondEcranPoke.png');
+    margin-left: auto;
+    margin-right: auto;
+    width: 1900px;
+}
+.container{
+	background-color: #ffffffc7;
+	padding-bottom: 10px;
+}
+.tab-content{
+	background-color: #ffffffc7;
+	padding-top: 10px;
+}
+td {
+	cursor: pointer;
+  }
+  .move-right {
+	  position: absolute;
+	  right: 0;
+	}
+  
+	.move-left {
+	  position: absolute;
+	  left: 0;
+	}
+  
+	.btn-file {
+	  position: relative;
+	  overflow: hidden;
+	}
+	.btn-file input[type=file] {
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  min-width: 100%;
+	  min-height: 100%;
+	  font-size: 100px;
+	  text-align: right;
+	  filter: alpha(opacity=0);
+	  opacity: 0;
+	  outline: none;
+	  background: white;
+	  cursor: inherit;
+	  display: block;
+	}

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="container">
+        <nav class="navbar navbar-light bg-light"></nav>
+        <a class="navbar-brand" href="http://localhost:3082/produits"></a>
+
+        <h2>Liste des produits</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>REFERENCE</th>
+                <th>DESIGNATION</th>
+                <th>DESCRIPTIF</th>
+                <th>PRIX VENTE</th>
+                <th>IMAGE</th>
+            </tr>
+            <tr *ngFor="let p of produit"> <!--(produit de produit.component) pour tout produit-->
+                <td>{{p.id}}</td>
+                <td>{{p.ref}}</td>
+                <td>{{p.designation}}</td>
+                <td>{{p.descriptif}}</td>
+                <td>{{p.prixVenteHT}}</td>
+                <td><img src="http://localhost:3082/{{p.image}}" style="width:20%;"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+

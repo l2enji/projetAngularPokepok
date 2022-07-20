@@ -1,0 +1,57 @@
+<ng-container *ngIf="product.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>IMAGE</th>
+                            <th>NO</th>
+                            <th>REF</th>
+                            <th>DESCRIPTION</th>
+                            <th>DESCRIPTIF</th>
+                            <th>PRIX</th>
+                            <th>QUANTITE</th>
+                            <th>TOTAL</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                <tr *ngFor="let item of product; let i = index;">
+                                    <td><img src="http://localhost:3082/{{item.image}}" style="width: 100px; height : 100px;" alt=""></td>
+                                    <td class="c">{{i+1}}</td>
+                                    <td class="c">{{item.ref}}</td>
+                                    <td class="c">{{item.designation}}</td> <!-- nom identique à springboot dans entity-->
+                                    <td class="c">{{item.descriptif}}</td>
+                                    <td class="c">{{item.prixVenteHT}}€</td>
+                                    <td class="c"><button (click)="deleteOne()"><i class="fas fa-minus-square"></i></button>
+                                                    {{quant}} 
+                                                    <button (click)="addOne()"><i class="fas fa-plus-square"></i></button></td>
+                                    <td class="c">{{quant*item.prixVenteHT}}€</td>
+                                    <td><button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"></td>
+                                    <td><button (click)="emptyCart()" class="btn btn-danger">Empty Cart</button></td>
+                                    <td><button routerLink="/product" class="btn btn-primary">Shop More</button></td>
+                                    <td><button routerLink="/checkout" class="btn btn-success">CheckOut</button></td>
+                                    <td><strong>Grand Total: {{grandTotal}} </strong></td>
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="product.length ==0"> <!--Si le container et vide, afficher l'image-->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Card</h5>
+        </div>
+        <div class="center">
+            <img src="http://localhost:3082/Images/caddie.jpg" alt="">
+            <h4>Your cart is empty!</h4>
+            <button routerLink="/product" class="btn btn-send">Shop Now</button>
+        </div>
+    </div>    
+</ng-container>

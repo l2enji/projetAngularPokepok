@@ -1,0 +1,22 @@
+
+.background{
+    background-image: url('http://localhost:3082/Images/fondEcranPoke.png') !important;
+    height: 1200px;
+    padding-top: 5px;
+    width: 1900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.log{
+    margin-right: 5px;
+    color: forestgreen;
+}
+.container{
+    background-color: #ffffffc7;
+    margin-top:10px;
+    text-align: center;
+    padding: 10px;
+}
+.adress{
+    margin:10px;
+}

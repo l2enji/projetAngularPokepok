@@ -1,0 +1,40 @@
+<header>
+<!--TOP HEADER-->
+    <div id="top-header">
+        <div class="container1">
+            <ul class="header-link pull-left">
+                <li><a href="#"><i class="fa fa-phone"></i> +330319254111</a></li>
+                <li><a href="#"><i class="fa fa-enveloppe"></i>contact@pokepok.com</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i> 32 rue de la colline Bourg Palette 044631</a></li>
+            </ul>
+            <ul class="header-link pull-right">
+                <li><a href="#"><i class="fa fa-euro"> EURO</i></a></li>
+                <li><a href="#"><i class="fa fa-user"> My Account</i></a></li>
+
+            </ul>
+        </div>
+    </div>
+<!--MAIN HEADER-->
+
+    <div class="navbar bg shadow-sm">
+        <div class="navbar align-item-center d-flex">
+                <a href="#"><img src="http://localhost:3082/Images/logo.png" style="width:300px; margin-left:30px;"></a>
+                <div>
+                    <div class="bar-menu">
+                        <ul class="menu">
+                            <li><a href="/login" >Login</a></li>
+                            <li><a href="/product" >Produits</a></li>
+                            <li><a href="/fournisseur" >Fournisseur</a></li>
+                            <li><a href="/contact">Contact</a></li>                           
+                        </ul>
+                    </div>
+                   
+                </div>
+            
+        </div>
+        <button routerLink = "/cart" class="btn caddie">
+            <i class="fas fa-cart-plus" style="font-size:30px;"></i>
+            <div style="font-size: 10;" class="badge bg-danger" style="margin-left: 10px;">{{totalItem}}</div>
+        </button>
+    </div>
+</header>

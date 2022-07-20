@@ -1,0 +1,41 @@
+<body style="background-color: forestgreen !important;">
+<div class="background">
+    <div class="container">
+    <div class="container">
+        <nav class="navbar navbar-light bg-light"></nav>
+        <a class="navbar-brand" href="http://localhost:3082/fournisseur"></a>
+
+        <h2>Liste des produits</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>RS</th>
+                <th>NOM</th>
+                <th>ADRESSE</th>
+                <th>CP</th>
+                <th>VILLE</th>
+                <th>PAYS</th>
+                <th>TEL</th>
+                <th>FAX</th>
+                <th>MAIL</th>
+            </tr>
+            <tr *ngFor="let f of fournisseur"> <!--(produit de produit.component) pour tout produit-->
+                <td>{{f.idFour}}</td>
+                <td>{{f.rsFour}}</td>
+                <td>{{f.nomFour}}</td>
+                <td>{{f.rueFour}}</td>
+                <td>{{f.cpFour}}</td>
+                <td>{{f.villeFour}}</td>
+                <td>{{f.paysFour}}</td>
+                <td>{{f.telFour}}</td>
+                <td>{{f.faxFour}}</td>
+                <td>{{f.mailFour}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<app-produit></app-produit> <!--pour afficher la page produit-->
+</div>
+</body>
